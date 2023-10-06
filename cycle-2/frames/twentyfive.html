@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>HTML Frames</title>
+   </head>
+	
+   <frameset rows = "10%,10%,80%">
+      <frame name = "top" src ="physics.html" />
+      <frame name = "middle" src = "welcome.html" />
+      <frameset name="main" cols="25%,50%,25%" frameborder="1" border="1" framespacing="1">
+        <frame src="math.html" name="ob" scrolling="auto">
+        <frame src="chemistry.html" name="haupt" scrolling="auto">
+        <frame src="computer.html" name="haupt" scrolling="auto">
+      </frameset>
+      <noframes>
+         <body>Your browser does not support frames.</body>
+      </noframes>
+   </frameset>
+</html>

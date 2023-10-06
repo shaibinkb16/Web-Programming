@@ -1,34 +1,67 @@
 <html>
 <head>
 <title>20 program</title>
+<style>
+body{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+.first{
+background-color:yellow;
+height:500px;
+width:350px;
+padding:20px;
+border-radius:30px;
+}
+
+form{
+background-color:yellow;
+}
+</style>
 </head>
 <body>
+<div class="first">
+
+<center><h1>The World of Fruits</h1></center>
   <table>
   <form>
-        <tr>
-            <th colspan="2"><h1>The World of Fruits<h1></th>
-        </tr>
+        
 		 <tr>
             <th colspan="2"><h3>Fruits Survey<h3></th>
         </tr>
 		<tr>
 		<td>Name</td>
-		<td><input type="text">
+		<td><input type="text" required>
 		</tr>
 		<td>Address</td>
-		<td><input type="text">
+		<td><input type="text" required>
 		</tr>
 		<td>Email</td>
-		<td><input type="email">
+		<td><input type="email" required>
 		</tr>
 		<tr>
 		<td><p>How Fruits do yo want</p></td>
-		<td><input type="radio">0<br><input type="radio">1<br><input type="radio">2<br><input type="radio">3</td>
+	    <td><br><br><br><input type="radio">0<br><input type="radio">1<br><input type="radio">2<br><input type="radio">3</td>
          </tr>
 		 <tr>
 		 <td>My favourite Fruit</td>
-		 <td><input type="select"></td>
+		 <td><select>
+        <option value="">Apple</option>
+        <option value="">Banana</option>
+        <option value="">plum</option>
+        <option value="">Pomegranate</option>
+    </select></td></tr>
+	<tr>
+	<td>Would you like to brochure</td>
+	<td><input type="checkbox"></td>
+	</tr>
+	<tr>
+	<th colspan="2"><button>Submit</button></th>
+	</tr>
 		</form>
 </table>
+</div>
 </body>
 </html>
