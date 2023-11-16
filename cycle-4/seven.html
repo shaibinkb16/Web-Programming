@@ -4,18 +4,19 @@
 </head>
 <body>
 <center>
-  <h1 id="textToChange">This is some text to change the color of background</h1>
+
   <br>
   <br>
+<p id="textToChange">
+JavaScript is a high-level, interpreted programming language that is widely used for web development. It is a versatile language that can be used both on the client side (in web browsers) and on the server side (with the help of frameworks like Node.js). JavaScript is primarily known for adding interactivity to websites, enabling dynamic content, and enhancing user experience.</p>  
   <button onclick="changeMe()">Change Color</button>
 </center>
   <script>
   function changeMe(){
   const textToChange = document.getElementById("textToChange");
   const inputColor=prompt("Enter the color for Text");
-if (inputColor){
-        document.body.style.backgroundColor = inputColor;
-		textToChange.style.color="white";
+   if (inputColor){
+		textToChange.style.backgroundcolor=inputColor;
     }}
   </script>
 </body>
