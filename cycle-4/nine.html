@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yearly Calendar Generator</title>
+</head>
+<body>
+  <h1>Yearly Calendar Generator</h1>
+  <p>Enter the year to generate a calendar:</p>
+
+  <input type="number" id="yearInput" placeholder="Enter year">
+  <button onclick="generateCalendar()">Generate Calendar</button>
+
+  <div id="calendarOutput"></div>
+
+  <script>
+    function generateCalendar() {
+      const yearInput = document.getElementById("yearInput");
+      const calendarOutput = document.getElementById("calendarOutput");
+
+      const year = parseInt(yearInput.value, 10);
+
+      if (isNaN(year) || year < 0) {
+        calendarOutput.textContent = "Please enter a valid year.";
+        return;
+      }
+
+      const months = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
+
+      let calendarHTML = "";
+      for (let month = 0; month < 12; month++) {
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        calendarHTML += `<h2>${months[month]} ${year}</h2>`;
+        calendarHTML += "<table><tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr><tr>";
+
+        let dayOfWeek = new Date(year, month, 1).getDay();
+        for (let i = 0; i < dayOfWeek; i++) {
+          calendarHTML += "<td></td>";
+        }
+
+        for (let day = 1; day <= daysInMonth; day++) {
+          calendarHTML += `<td>${day}</td>`;
+          if (dayOfWeek === 6) {
+            calendarHTML += "</tr><tr>";
+            dayOfWeek = 0;
+          } else {
+            dayOfWeek++;
+          }
+        }
+
+        calendarHTML += "</tr></table>";
+      }
+
+      calendarOutput.innerHTML = calendarHTML;
+    }
+  </script>
+</body>
+</html>

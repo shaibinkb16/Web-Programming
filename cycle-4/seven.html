@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>Change Text Color</title>
+</head>
+<body>
+<center>
+  <h1 id="textToChange">This is some text to change the color of background</h1>
+  <br>
+  <br>
+  <button onclick="changeMe()">Change Color</button>
+</center>
+  <script>
+  function changeMe(){
+  const textToChange = document.getElementById("textToChange");
+  const inputColor=prompt("Enter the color for Text");
+if (inputColor){
+        document.body.style.backgroundColor = inputColor;
+		textToChange.style.color="white";
+    }}
+  </script>
+</body>
+</html>

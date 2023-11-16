@@ -1,0 +1,38 @@
+<html>
+</head>
+<title>
+Program-3
+</title>
+</head>
+<body>
+<center>
+<h1>Check if Positive or Not</h1>
+<br>
+<br>
+<input id="in" type="text" placeholder="Enter a number" required><br>
+<br>
+<button onclick="Number()">Check</button>
+<h2 id="display"></h2>
+</center>
+<script>
+function Number()
+{
+  let Number = parseInt(document.getElementById("in").value);
+  if(isNaN(Number)){
+  alert("InValid Number")
+  }
+  console.log(Number);
+  if (Number > 0) {
+   document.getElementById("display").innerHTML = "The number is positive";
+} else if (Number < 0) {
+  document.getElementById("display").innerHTML = "The number is Negative";
+} else {
+document.getElementById("display").innerHTML = "The number is Zero";
+}
+  
+}	
+		
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Hover Example</title>
+  <style>
+    #hover-content {
+      padding: 20px;
+      border: 1px solid #ccc;
+      text-align: center;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="hover-content" onmouseover="changeContent()">
+  <h2>Hover Over Me!</h2>
+  <img id="hover-image" src="google1.png" alt="Original Image">
+  <p>Google Me</p>
+</div>
+
+
+<script>
+  function changeContent() {
+
+    var imageElement = document.getElementById("hover-image");
+    var textElement = document.querySelector("#hover-content p");
+
+    imageElement.src = "giphy.GIF";
+
+    textElement.innerHTML = "Let's Dance";
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Text Color</title>
+</head>
+<body>
+  <button id="changeColorButton">Change Color</button>
+  <p id="textToChange">This is some text to change the color of.</p>
+
+  <script>
+    // Get references to the button and text element
+    const changeColorButton = document.getElementById("changeColorButton");
+    const textToChange = document.getElementById("textToChange");
+
+    // Function to change the text color
+    function changeTextColor() {
+      // Generate a random color
+      const randomColor = getRandomColor();
+
+      // Apply the random color to the text
+      textToChange.style.color = randomColor;
+    }
+
+    // Function to generate a random color
+    function getRandomColor() {
+      const letters = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    // Add a click event listener to the button
+    changeColorButton.addEventListener("click", changeTextColor);
+  </script>
+</body>
+</html>

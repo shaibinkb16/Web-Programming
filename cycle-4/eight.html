@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<center>
+<h1 style="color:green";>Calculate age from Date of Birth</h2>
+  <br>
+  <br>
+  <label>Enter your name:</label>
+  <input type="text" id="input1">
+  <br>
+  <br>
+  <label>Enter your DOB:</label>
+  <input type="date" id="input2">
+  <br>
+  <br>
+  <br>
+  <button id="submit" onclick="calculateAge()">Calculate Age</button>
+  <br>
+  <br>
+  <h2 id="Name1" style="color:green"></h2>
+  <h2 id ="Age" style="color:green"></h2>
+</center>
+  <script>
+  function calculateAge(){
+  const Name = document.getElementById("input1").value;
+   const DoB = document.getElementById("input2").value;
+   const DateofBirth=new Date(DoB);
+   const Today=new Date();
+   const ageinmilli=Today-DateofBirth;
+   const ActualAge=ageinmilli/(1000*60*60*24*365.25);
+   const age=Math.floor(ActualAge);
+   document.getElementById("Age").textContent=`Your age is ${age}`;
+   document.getElementById("Name1").textContent=`Your name is: ${Name}`;
+   
+}
+  </script>
+</body>
+</html>

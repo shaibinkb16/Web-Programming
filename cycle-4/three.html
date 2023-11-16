@@ -1,0 +1,58 @@
+<html>
+</head>
+<title>
+Program-3
+</title>
+</head>
+<body>
+<center>
+<h1>Today's Date </h1>
+<br>
+<br>
+<h2 id="date"></h2>
+</center>
+<script>
+getDate();
+function getDate()
+{
+var date = new Date();
+var datetime = "Date : "+date.getDate() + "/"
+                + (date.getMonth()+1)  + "/"
+                + date.getFullYear() + " Time : "
+                + date.getHours() + ":"
+                + date.getMinutes() + ":"
+                + date.getSeconds();
+				document.getElementById("date").innerHTML=datetime;
+				setInterval(getDate, 1000);
+	}			
+</script>
+
+</body>
+</html>
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Continuous Date and Time</title>
+</head>
+<body>
+  <div id="datetime"></div>
+
+  <script>
+    function updateDateTime() {
+      const dateTimeElement = document.getElementById('datetime');
+      const currentDate = new Date();
+      const formattedDate = currentDate.toLocaleDateString();
+      const formattedTime = currentDate.toLocaleTimeString();
+      dateTimeElement.innerHTML = `Date: ${formattedDate}<br>Time: ${formattedTime}`;
+    }
+
+    // Update the date and time every second (1000 milliseconds)
+  
+
+    // Call the function immediately to display the initial date and time
+    updateDateTime();
+  </script>
+</body>
+</html>
+--->
