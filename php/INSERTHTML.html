@@ -1,0 +1,30 @@
+
+<html>
+<head>
+    <title>Insert Data</title>
+	<style>
+	body{display:flex;align-items:center;justify-content:center;height:100vh;flex-direction:column;}
+	form{flex-direction:column;border:2px solid:padding:20px;border-radius:20px;}
+	</style>
+</head>
+<body>
+    <h2>Insert Data into Table</h2>
+    
+    <form action="insertHTML.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+        <br>
+		<br>
+        <label for="course">Course:</label>
+        <input type="text" name="course" required>
+        <br>
+		<br>
+		<label for="age">Age:</label>
+        <input type="number" name="age" required>
+		<br>
+		<br>
+        <center><input type="submit"><center>
+    </form>
+</body>
+</html>
+

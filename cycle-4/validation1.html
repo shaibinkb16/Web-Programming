@@ -26,19 +26,19 @@ background-color:yellow;
 
 <center><h1>The World of Fruits</h1></center>
   <table>
-  <form>
+  <form id="registrationForm" onsubmit="return validateForm()>
         
 		 <tr>
             <th colspan="2"><h3>Fruits Survey<h3></th>
         </tr>
 		<tr>
 		<td>Name</td>
-		<td><input type="text" required>
-		</tr>
-		<td>Address</td>
-		<td><input type="text" required>
+		<td><input type="text" id="username" name="username" required>
 		</tr>
 		<td>Email</td>
+		<td><input type="text" required>
+		</tr>
+		<td>Password</td>
 		<td><input type="email" required>
 		</tr>
 		<tr>
